@@ -1,11 +1,11 @@
-#include <"header.h">
+#include "header.h"
 
 int  min(int a,int b) {
     if(a<b) return a;
     return b;
 }
 
-void min_notes(int amt) {
+void min_notes(long long int amt) {
     printf("\e[1;1H\e[2J");
     int notes[9]={1,2,5,10,20,50,100,200,500};
 
