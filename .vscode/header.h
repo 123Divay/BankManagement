@@ -28,6 +28,15 @@ int Point;                  // This is point for next position for customer
 int Last;                   // Storing last AccountNo
 int city;
 
+typedef struct MinimumACno {
+    int number;
+    struct MinimumACno* next;
+} MinimumACno;
+
+MinimumACno* MinimumACnoStart;
+MinimumACno* MinimumACnoEnd;
+MinimumACno* MinimumACnoPoint;
+
 int** cost;
 int** dp;
 
