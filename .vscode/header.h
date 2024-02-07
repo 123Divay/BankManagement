@@ -16,7 +16,8 @@ typedef struct Account {
     int Age;
     long int MobileNo;
     int Account_Type;       // If 1 account is saving and if 2 account is current
-    int ATM;                // 0 for No and 1 for Yes
+    int ATM;     
+    int TOA;           // 0 for No and 1 for Yes
     int cheque;
     ll money;
 } Account;
@@ -45,6 +46,9 @@ void depositeFunds();
 void withdrawFunds();
 void checkBalance();
 void allAccountHoldersDetails();
+void managerOption();
+
+void print(Account* acc);
 
 /* Manager Developer Functions */
 void sorts();
@@ -58,6 +62,8 @@ void merge_age(Account arr[], int l, int m, int r);
 /* Min Notes */
 void min_Notes(int amount);
 
+void select_method();
+
 
 void travel();
 int tsp(int mask, int pos, int city, int VISITED_ALL);
@@ -66,6 +72,9 @@ int min(int a, int b);
 
 void acc_by_name(char name[20]);
 int binarySearch(Account arr[], int l, int r, char x[20]);
+int comparator(const void *b1,const void *b2);
+void sort_by_name();
+
 
 
 
