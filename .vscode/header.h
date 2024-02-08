@@ -47,9 +47,10 @@ void withdrawFunds();
 void checkBalance();
 void allAccountHoldersDetails();
 void managerOption();
+void decidePoint();
 
 void print(Account* acc);
-
+void SetMinimumACno(int);
 /* Manager Developer Functions */
 void sorts();
 

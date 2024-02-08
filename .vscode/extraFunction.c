@@ -1,5 +1,54 @@
 #include "header.h"
 
+void decidePoint() {
+    if (MinimumACnoStart!=NULL) {
+        Point=MinimumACnoStart->number;
+        MinimumACnoStart=MinimumACnoStart->next;
+    }
+    else {
+        Point=Last+1;
+        Last++;
+    }
+}
+
+void SetMinimumACno(int num) {
+    MinimumACno* temp=(MinimumACno*)malloc(sizeof(MinimumACno));
+    temp->number=num;
+    temp->next=NULL;
+    MinimumACnoPoint=(MinimumACno*)malloc(sizeof(MinimumACno));
+    MinimumACnoPoint->next=MinimumACnoStart;
+    if (MinimumACnoStart==NULL) {
+        MinimumACnoStart=temp;
+    }
+    else if (MinimumACnoStart->next==NULL) {
+        if (MinimumACnoStart->number>temp->number) {
+            temp->next=MinimumACnoStart;
+            MinimumACnoStart=temp;
+        }
+        else {
+            temp->next=MinimumACnoStart->next;
+            MinimumACnoStart->next=temp;
+        }
+    }
+    else {
+        if (MinimumACnoStart->number>temp->number) {
+            temp->next=MinimumACnoStart;
+            MinimumACnoStart=temp;
+        }
+        while(MinimumACnoPoint->next!=NULL) {
+            if (MinimumACnoPoint->next->number>temp->number) {
+                temp->next=MinimumACnoPoint->next;
+                MinimumACnoPoint->next=temp;
+                break;
+            }
+            MinimumACnoPoint=MinimumACnoPoint->next;
+        }
+        if (MinimumACnoPoint->next==NULL) {
+            temp->next=MinimumACnoPoint->next;
+            MinimumACnoPoint->next=temp;
+        }
+    }
+}
 void managerOption() {
     int a;
     prompt2();
