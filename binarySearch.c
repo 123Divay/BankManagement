@@ -28,7 +28,7 @@ void acc_by_name(char name[30]) {
         printf("\e[1;1H\e[2J");
         printf("\n--------- Welcome To MNNIT Bank ---------\n");
         printf("A/C no\tName\tSurname\tDOB\tAge\tMobileNo\tAccount Type\n");
-        printf("%d\t%s\t%s\t%d\t%d\t%ld\t",startPtr[ans].AccountNo,startPtr[ans].name,startPtr[ans].surname,startPtr[ans].DOB,startPtr[ans].age,startPtr[ans].MobileNo);
+        printf("%d\t%s\t%s\t%d\t%d\t%ld\t",startPtr[ans].AccountNo,startPtr[ans].name,startPtr[ans].surname,startPtr[ans].DOB,startPtr[ans].Age,startPtr[ans].MobileNo);
         if (startPtr[ans].TOA==1) {
             printf("Saving\n");
         }

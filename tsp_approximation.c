@@ -16,7 +16,7 @@ void dfs(int v,bool vis[],int graph[][city]){
 
 int findMinKey(int key[], bool mstSet[])
 {
-    int min = INT_MAX, min_index;
+    int min = 1e9, min_index;
     for (int v = 0; v < city; v++)
     {
         if (mstSet[v] == false && key[v] < min)
@@ -35,7 +35,7 @@ void primMST()
     bool mstSet[city];
     for (int i = 0; i < city; i++)
     {
-        key[i] = INT_MAX;
+        key[i] = 1e9;
         mstSet[i] = false;
     }
     key[0] = 0;
