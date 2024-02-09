@@ -1,5 +1,62 @@
 #include "header.h"
 
+void createAccount(){
+    char arr[4];
+    printf("\e[1;1H\e[2J");
+    printf("\n--------- Welcome To MNNIT Bank ---------\n");
+    Account temp;
+    printf("Enter Your Name\n");
+    scanf("%s",temp.name);
+    printf("Enter Your Sur Name\n");
+    scanf("%s",temp.surname);
+    printf("Enter Your Age\n");
+    scanf("%d",&temp.age);
+    printf("Enter Your Date of Birth\n");
+    scanf("%d",&temp.dob);
+    printf("Enter Your Mobile Number\n");
+    scanf("%d",&temp.mob);
+    printf("Type of Account : Press --> 1 for Savings \t Press -->2 for Current \n ");
+    scanf("%d",&temp.toa);
+    printf("Do you want ATM card? YES or NO\n");
+    scanf("%s",arr);
+
+    if(strcmp(arr,"YES")==0){
+        temp.atm=1;
+    } else {
+        temp.atm=0;
+    }
+
+    printf("Do you want Chequebook? YES or NO\n");
+    scanf("%s",arr);
+
+    if(strcmp(arr,"YES")==0){
+        temp.cheque=1;
+    } else {
+        temp.cheque=0;
+    }
+
+
+    printf"What amount you want to deposit ?\n");
+    scanf("%d",&temp.money);
+
+    decidePoint();
+
+    if(Point == MaxLen){
+        startPtr=(Account*) realloc(startPtr,MaxLen*sizeof(Account)*2);
+        MaxLen=MaxLen*2;
+    }
+
+    temp.acc_no=Point;
+    temp.acc_id=1;
+    startPtr[Point]=temp;
+
+    printf("\e[1;1H\e[2J");
+
+    printf("Your Account number is %d\n",Point);
+    
+
+
+}
 
 void depositFunds(){
     printf("\e[1;1H\e[2J");
