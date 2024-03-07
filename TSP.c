@@ -29,12 +29,14 @@ void salesman() {
     int VISITED_ALL=(1<<city)-1;
     for (int i=0;i<(1<<city);i++) {
         dp[i]=(int*)malloc(sizeof(int)*city);
-        for (j=0;j<city;j++) {
+        for (int j=0;j<city;j++) {
             dp[i][j]=-1;
         }
     }
     int ans=tsp(1,0,city,VISITED_ALL);
+    printf("Minimum cost of travelling is\n");
     printf("%d\n",ans);
+    delay(10);
     free(cost);
 }
 
@@ -54,7 +56,7 @@ int tsp(int mask,int pos,int city,int VISITED_ALL) {
     else if (dp[mask][pos]!=-1) {
         return dp[mask][pos];
     }
-    int ans=INT_MAX;
+    int ans=1e9;
     for (int i=0;i<city;i++) {
         if ((mask&(1<<i))==0) {
             int answer=cost[pos][i]+tsp((mask|(1<<i)),i,city,VISITED_ALL);

@@ -51,9 +51,9 @@ void SetMinimumACno(int num) {
 }
 void managerOption() {
     int a;
-    prompt2();
+    prompt();
     scanf("%d",&a);
-    managerselection(a);
+    managerSelection(a);
 }
 
 void print(Account* acc) {
@@ -62,7 +62,7 @@ void print(Account* acc) {
     printf("A/C no\tName\tSurname\tDOB\tAge\tMobile No\tAccount Type\n");
     for (int i=0;i<Last+1;i++) {
           if (acc[i].Act_ID==1) {
-            printf("%d\t%s\t%s\t%d\t%d\t%ld\t",acc[i].AccountNo,acc[i].name,acc[i].surname,acc[i].DOB,acc[i].Age,acc[i].MobileNo);
+            printf("%d\t%s\t%s\t%d\t%d\t%lld\t",acc[i].AccountNo,acc[i].name,acc[i].surname,acc[i].DOB,acc[i].Age,acc[i].MobileNo);
             if (acc[i].TOA==1) {
                 printf("Saving\n");
             }
@@ -71,6 +71,7 @@ void print(Account* acc) {
             }
           }
     }
+    delay(10);
 }
 
 int comparator(const void *b1,const void *b2) {
@@ -95,11 +96,11 @@ void select_method() {
     if (n==1) {
         printf("How many city he has to visit:");
         scanf("%d",&city);
-        travel();
+        salesman();
     }
     else if (n==2) {
         printf("How many city he has to visit:");
         scanf("%d",&city);
-        Approximation();
+        approximation();
     }
 }

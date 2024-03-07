@@ -9,13 +9,13 @@ void first_Selection(int a){
             depositFunds();
             break;
         case 3:
-            withdrawFunds();
+            withdrawFund();
             break;
         case 4:
             checkBalance();
             break;
         case 5:
-            allAccountHoldersDetail();
+            allAccountHoldersDetails();
             break;
         case 6:
             closeAccount();
@@ -47,6 +47,7 @@ void managerSelection(int a){
             printf("\e[1;1H\e[2J");
             printf("\n--------- Welcome To MNNIT Bank ---------\n");
             char name[20];
+            scanf("%s",name);
             acc_by_name(name);
             break;
         case 3:

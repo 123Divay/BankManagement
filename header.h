@@ -4,7 +4,6 @@
 #include <stdbool.h>
 #include <time.h>
 
-typedef long long int ll;
 
 /* Structure for Details of Accounts */
 typedef struct Account {
@@ -14,12 +13,11 @@ typedef struct Account {
     char surname[20];
     int DOB;                // Format ddmmyyyy
     int Age;
-    long int MobileNo;
-    int Account_Type;       // If 1 account is saving and if 2 account is current
+    long long int MobileNo;
     int ATM;     
     int TOA;           // 0 for No and 1 for Yes
     int cheque;
-    ll money;
+    int money;
 } Account;
 
 /* Initialize Storing Element */
@@ -41,13 +39,23 @@ MinimumACno* MinimumACnoPoint;
 int** cost;
 int** dp;
 
+void mainPrompt();
+void prompt();
+
 /* Declaring Selection Functions */
-void depositeFunds();
-void withdrawFunds();
+void depositFunds();
+void withdrawFund();
 void checkBalance();
 void allAccountHoldersDetails();
 void managerOption();
 void decidePoint();
+void first_Selection(int a);
+void managerSelection(int a);
+void decidePoint();
+void createAccount();
+void closeAccount();
+void modifyAccount();
+
 
 void print(Account* acc);
 void SetMinimumACno(int);
@@ -61,20 +69,24 @@ void merge(Account arr[], int l, int m, int r);
 void merge_age(Account arr[], int l, int m, int r);
 
 /* Min Notes */
-void min_Notes(int amount);
-
+void min_notes(long long int amount);
+void dfs(int v,bool vis[],int graph[][city]);
+int findMinKey(int key[], bool mstSet[]);
+void primMST();
 void select_method();
+void approximation();
 
 
-void travel();
+void salesman();
 int tsp(int mask, int pos, int city, int VISITED_ALL);
 int min(int a, int b);
 
 
-void acc_by_name(char name[20]);
-int binarySearch(Account arr[], int l, int r, char x[20]);
+void acc_by_name(char name[30]);
+int binarySearch(Account arr[], int l, int r, char x[30]);
 int comparator(const void *b1,const void *b2);
 void sort_by_name();
+void delay(int number_of_seconds);
 
 
 

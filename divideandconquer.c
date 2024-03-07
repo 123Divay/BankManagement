@@ -1,15 +1,15 @@
 #include "header.h"
 
-void mergeSortAge(int l,int r, Account acc ){
+void mergeSort_age(Account arr[], int l, int r) {
     if(l<r){
-        int mid=(l+r)/2;
-        mergeSortAge(l,mid,acc);
-        mergeSortAge(mid+1,r,acc);
-        mergeAge(l,mid,r,acc);
+        int mid=l+(r-l)/2;
+        mergeSort_age(arr,l,mid);
+        mergeSort_age(arr,mid+1,r);
+        merge_age(arr,l,mid,r);
     }
 }
 
-void mergeAge(int l,int m,int r,Account arr){
+void merge_age(Account arr[], int l, int m, int r){
     int i, j, k; 
     int n1 = m - l + 1; 
     int n2 = r - m; 
@@ -35,7 +35,7 @@ void mergeAge(int l,int m,int r,Account arr){
     // Initial index of merged subarray 
     k = l; 
     while (i < n1 && j < n2) { 
-        if (L[i].age <= R[j].age) { 
+        if (L[i].Age <= R[j].Age) { 
             arr[k] = L[i]; 
             i++; 
         } 
@@ -63,16 +63,16 @@ void mergeAge(int l,int m,int r,Account arr){
     } 
 }
 
-void mergeSortAccount(int l,int r, Account acc ){
+void mergeSort(Account arr[], int l, int r){
     if(l<r){
-        int mid=(l+r)/2;
-        mergeSortAge(l,mid,acc);
-        mergeSortAge(mid+1,r,acc);
-        mergeAge(l,mid,r,acc);
+        int mid=l+(r-l)/2;
+        mergeSort(arr,l,mid);
+        mergeSort(arr,mid+1,r);
+        merge(arr,l,mid,r);
     }
 }
 
-void mergeAccount(int l,int m,int r,Account arr){
+void merge(Account arr[], int l, int m, int r) {
     int i, j, k; 
     int n1 = m - l + 1; 
     int n2 = r - m; 
@@ -98,7 +98,7 @@ void mergeAccount(int l,int m,int r,Account arr){
     // Initial index of merged subarray 
     k = l; 
     while (i < n1 && j < n2) { 
-        if (L[i].account <= R[j].account) { 
+        if (L[i].AccountNo <= R[j].AccountNo) { 
             arr[k] = L[i]; 
             i++; 
         } 

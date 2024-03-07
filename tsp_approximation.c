@@ -69,12 +69,15 @@ void primMST()
     }
     
     bool vis[city];
+    total=0;
     
     dfs(0,vis,graph);
     
-    printf("0");
     
-    printf("\n TOTAL = %d",total);
+    printf("\n TOTAL = %d\n",total);
+    
+    
+    delay(10);
 
 }
 
@@ -84,7 +87,7 @@ void approximation()
     printf("PLEASE ENTER CITY NAMES : \n");
     for (int i = 0; i < city; i++)
     {
-        scnaf("%s", arr[i]);
+        scanf("%s", arr[i]);
     }
 
     cost = (int **)malloc(sizeof(int *) * city);
@@ -104,7 +107,7 @@ void approximation()
             if (i != j)
             {
                 printf("Enter cost for %s to %s \n", arr[i], arr[j]);
-                scanf("%d", arr[i][j]);
+                scanf("%d",&cost[i][j]);
             }
         }
     }
