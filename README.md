@@ -1,3 +1,5 @@
 # BANK MANAGEMENT SYSTEM
 # Overview :-
+Bank Management is based on the concept of creating and storing customer's account details. Here the user can perform all the tasks like creating an account, deposit amount, withdraw amount, check balance, view all account holders details, close an account, modify an account.
 
+Talking about the features of the Bank Management, a user can create an account by providing the name of the account holder, select amount type whether it's a Saving account or Current account, and providing an initial amount. The account number is auto-generated. Then the user can also deposit or withdraw money just by providing his/her account number, then the system displays his/her profile and entering an amount. For certain purposes, he/she can also check for the balance inquiry which displays the amount currently available in the respective account. He/She can also check for all account holders details. Another feature is that the user can close their account by just providing their account number and he/she can also modify their account detail if they want to.
