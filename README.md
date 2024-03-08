@@ -19,9 +19,9 @@ Talking about the features of the Bank Management, a user can create an account 
 
 # Algorithms -
 1. Merge Sort ( Example of divide and conquer ) ( O(nlogn) )
-   #^  By Age
-   #^  By A/C no
-   #^  By Name
+   #^ By Age
+   #^ By A/C no
+   #^ By Name
 2. Binary Search ( O(logn) )
    *Just providing name if it exist then show all details.
 
