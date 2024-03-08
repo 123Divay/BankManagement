@@ -61,6 +61,7 @@ Talking about the features of the Bank Management, a user can create an account 
 1. To use this approximation triangular inequality must be true.
 2. What is triangular inequality.
    * If there is 3 nodes a,b,c and there is an edge between ab bc and ac then cost(ab) + cost(bc) >= cost(ac).
+   
 3 Steps :-
    * Let 0 be the starting and ending point for salesman.
    * Construct Minimum Spanning Tree with taking 0 as root using Prim's Algorithm.
