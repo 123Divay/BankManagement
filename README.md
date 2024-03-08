@@ -19,11 +19,11 @@ Talking about the features of the Bank Management, a user can create an account 
 
 # Algorithms -
 1. Merge Sort ( Example of divide and conquer ) ( O(nlogn) )
-   .By Age
-   .By A/C no
-   .By Name
+   *By Age
+   *By A/C no
+   *By Name
 2. Binary Search ( O(logn) )
-   .Just providing name if it exist then show all details.
+   *Just providing name if it exist then show all details.
 
 # Some Implementations :-
 
@@ -53,17 +53,17 @@ Talking about the features of the Bank Management, a user can create an account 
 3. This approach is native approach by DP but it takes lot of time.
 4. This is brute force method which takes O((n-1)!) time which is not polynomial so we will not consider that.
 
-   .But in real world there is no solution for TSP but there exists a approximate solution.
+   *But in real world there is no solution for TSP but there exists a approximate solution.
 
 5. There is 2-approximation and 3/2-approximation.
 
 # 2-Approximation
 1. To use this approximation triangular inequality must be true.
 2. What is triangular inequality.
-   .If there is 3 nodes a,b,c and there is an edge between ab bc and ac then cost(ab) + cost(bc) >= cost(ac).
+   *If there is 3 nodes a,b,c and there is an edge between ab bc and ac then cost(ab) + cost(bc) >= cost(ac).
 3 Steps :-
-   .Let 0 be the starting and ending point for salesman.
-   .Construct Minimum Spanning Tree with taking 0 as root using Prim's Algorithm.
-   .List vertices visited in Depth First Search of the constructed MST and calculate the cost.
-   .It gives solution of O(polynomial).
+   *Let 0 be the starting and ending point for salesman.
+   *Construct Minimum Spanning Tree with taking 0 as root using Prim's Algorithm.
+   *List vertices visited in Depth First Search of the constructed MST and calculate the cost.
+   *It gives solution of O(polynomial).
    
