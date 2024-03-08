@@ -59,10 +59,10 @@ void managerOption() {
 void print(Account* acc) {
     printf("\e[1;1H\e[2J");
     printf("\n--------- Welcome To MNNIT Bank ---------\n");
-    printf("A/C no\tName\tSurname\tDOB\tAge\tMobile No\tAccount Type\n");
+    printf("A/C no\tName\tSurname\tDOB\t\tAge\tMobile No\tAccount Type\n");
     for (int i=0;i<Last+1;i++) {
           if (acc[i].Act_ID==1) {
-            printf("%d\t%s\t%s\t%d\t%d\t%lld\t",acc[i].AccountNo,acc[i].name,acc[i].surname,acc[i].DOB,acc[i].Age,acc[i].MobileNo);
+            printf("%d\t%s\t%s\t%s\t%d\t%lld\t",acc[i].AccountNo,acc[i].name,acc[i].surname,acc[i].DOB,acc[i].Age,acc[i].MobileNo);
             if (acc[i].TOA==1) {
                 printf("Saving\n");
             }

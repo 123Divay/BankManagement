@@ -19,7 +19,7 @@ int main() {
     Last=-1;
     int First;
     while(1) {
-        mainPrompt();
+        mainPrompt();     // Printing mainPrompt on screen
         scanf("%d",&First);
         first_Selection(First);
     }

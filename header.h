@@ -1,3 +1,4 @@
+/*Including all headers file*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,7 +12,7 @@ typedef struct Account {
     int AccountNo;          // This is randomly generated which is always minimum possible number
     char name[20];
     char surname[20];
-    int DOB;                // Format ddmmyyyy
+    char DOB[20];                // Format dd/mm/yyyy
     int Age;
     long long int MobileNo;
     int ATM;     
@@ -27,18 +28,19 @@ int Point;                  // This is point for next position for customer
 int Last;                   // Storing last AccountNo
 int city;
 
-typedef struct MinimumACno {
+typedef struct MinimumACno {  // Linked list for getting minimum account number
     int number;
     struct MinimumACno* next;
 } MinimumACno;
 
-MinimumACno* MinimumACnoStart;
-MinimumACno* MinimumACnoEnd;
-MinimumACno* MinimumACnoPoint;
+MinimumACno* MinimumACnoStart;   // Pointing first element of linked list
+MinimumACno* MinimumACnoEnd;     // Pointing last element of linked list
+MinimumACno* MinimumACnoPoint;   // Pointing next element of linked list
 
 int** cost;
 int** dp;
 
+/*Declaring prompt functions*/
 void mainPrompt();
 void prompt();
 
@@ -58,7 +60,10 @@ void modifyAccount();
 
 
 void print(Account* acc);
+
+/*Setting minimum account  number*/
 void SetMinimumACno(int);
+
 /* Manager Developer Functions */
 void sorts();
 

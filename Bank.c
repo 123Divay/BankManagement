@@ -12,7 +12,7 @@ void createAccount(){
     printf("Enter Your Age\n");
     scanf("%d",&temp.Age);
     printf("Enter Your Date of Birth\n");
-    scanf("%d",&temp.DOB);
+    scanf("%s",temp.DOB);
     printf("Enter Your Mobile Number\n");
     scanf("%lld",&temp.MobileNo);
     printf("Type of Account : Press --> 1 for Savings \t Press --> 2 for Current \n ");
@@ -136,7 +136,7 @@ void allAccountHoldersDetails(){
 
     for(int i=0;i<MaxLen;i++){
         if(startPtr[i].Act_ID == 1){
-            printf("%d \t %s \t %s \t \t %d \t %d \t %lld \t",startPtr[i].AccountNo,startPtr[i].name,startPtr[i].surname,startPtr[i].DOB,startPtr[i].Age,startPtr[i].MobileNo);
+            printf("%d \t %s \t %s \t \t %s \t %d \t %lld \t",startPtr[i].AccountNo,startPtr[i].name,startPtr[i].surname,startPtr[i].DOB,startPtr[i].Age,startPtr[i].MobileNo);
             if(startPtr[i].TOA == 1) printf("SAVING\n");
             else printf("CURRENT\n");
         }

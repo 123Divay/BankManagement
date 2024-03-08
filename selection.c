@@ -1,6 +1,6 @@
 #include "header.h"
 
-void first_Selection(int a){
+void first_Selection(int a) {       // Selection functions
     switch(a){
         case 1:
             createAccount();
@@ -38,7 +38,7 @@ void first_Selection(int a){
 
 }
 
-void managerSelection(int a){
+void managerSelection(int a) {
     switch(a){
         case 1: 
             sorts();
