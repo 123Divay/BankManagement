@@ -66,4 +66,7 @@ Talking about the features of the Bank Management, a user can create an account 
    * Construct Minimum Spanning Tree with taking 0 as root using Prim's Algorithm.
    * List vertices visited in Depth First Search of the constructed MST and calculate the cost.
    * It gives solution of O(polynomial).
+
+# How to run the code
+   
    
